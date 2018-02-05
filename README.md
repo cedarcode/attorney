@@ -21,6 +21,10 @@ Or install it yourself as:
 $ gem install attorney
 ```
 
+```
+$ bin/rails attorney:install:migrations
+```
+
 ## Contributing
 Contribution directions go here.
 
