@@ -1,9 +1,6 @@
 # Attorney
 Short description and motivation.
 
-## Usage
-How to use my plugin.
-
 ## Installation
 Add this line to your application's Gemfile:
 
@@ -19,6 +16,13 @@ $ bundle
 Or install it yourself as:
 ```bash
 $ gem install attorney
+```
+
+## Usage
+
+Install migrations:
+```bash
+$ bin/rails attorney:install:migrations
 ```
 
 ## Contributing
