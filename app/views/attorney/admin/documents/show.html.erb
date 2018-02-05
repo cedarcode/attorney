@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @document.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @document.content %>
+</p>
+
+<%= link_to 'Edit', edit_admin_document_path(@document) %> |
+<%= link_to 'Back', admin_documents_path %>
