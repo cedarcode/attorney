@@ -5,13 +5,18 @@ module Attorney
 
     let(:valid_attributes) do
       {
+        slug: 'terms',
         name: 'Terms & Conditions',
         content: 'Lorem ipsum dolor sit amet'
       }
     end
 
     let(:invalid_attributes) {
-      skip('Add a hash of attributes invalid for your model')
+      {
+        slug: nil,
+        name: 'Terms & Conditions',
+        content: 'Lorem ipsum dolor sit amet'
+      }
     }
 
     before do
@@ -75,6 +80,7 @@ module Attorney
       context 'with valid params' do
         let(:new_attributes) do
           {
+            slug: 'new_slug',
             name: 'New name',
             content: 'New content'
           }

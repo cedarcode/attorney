@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :slug %>
+    <%= form.text_field :slug, id: :document_slug %>
+  </div>
+
+  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :document_name %>
   </div>
