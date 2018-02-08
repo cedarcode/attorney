@@ -1,7 +1,7 @@
 <%= form_with(model: [:admin, document], local: true) do |form| %>
   <% if document.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(document.errors.count, "error") %> prohibited this document from being saved:</h2>
+      <h2><%= pluralize(document.errors.count, 'error') %> prohibited this document from being saved:</h2>
 
       <ul>
       <% document.errors.full_messages.each do |message| %>
@@ -23,10 +23,12 @@
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content, id: :document_content %>
+    <%= form.text_area :content, id: :document_content, data: { 'rich-editor' => true } %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+<%= javascript_include_tag 'https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js' %>
