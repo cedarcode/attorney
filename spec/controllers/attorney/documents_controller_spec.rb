@@ -6,7 +6,6 @@ module Attorney
     let(:valid_attributes) do
       {
         slug: 'terms',
-        name: 'Terms & Conditions',
         content: 'Lorem ipsum dolor sit amet'
       }
     end

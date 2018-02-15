@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 20180205173208) do
 
   create_table "attorney_documents", force: :cascade do |t|
     t.string "slug", null: false
-    t.string "name"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
