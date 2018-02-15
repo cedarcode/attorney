@@ -1,0 +1,11 @@
+development:
+  admin:
+    basic_auth:
+      name: admin
+      password: admin
+
+test:
+  admin:
+    basic_auth:
+      name: test
+      password: secret
