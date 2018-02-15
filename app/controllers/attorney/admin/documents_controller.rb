@@ -42,7 +42,7 @@ module Attorney
     end
 
     def document_params
-      params.require(:document).permit(:slug, :name, :content)
+      params.require(:document).permit(:slug, :content)
     end
   end
 end

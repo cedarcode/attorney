@@ -6,7 +6,6 @@ module Attorney
     let(:valid_attributes) do
       {
         slug: 'terms',
-        name: 'Terms & Conditions',
         content: 'Lorem ipsum dolor sit amet'
       }
     end
@@ -14,7 +13,6 @@ module Attorney
     let(:invalid_attributes) {
       {
         slug: nil,
-        name: 'Terms & Conditions',
         content: 'Lorem ipsum dolor sit amet'
       }
     }
@@ -81,7 +79,6 @@ module Attorney
         let(:new_attributes) do
           {
             slug: 'new_slug',
-            name: 'New name',
             content: 'New content'
           }
         end
@@ -90,7 +87,7 @@ module Attorney
           document = Document.create! valid_attributes
           put :update, params: { id: document.to_param, document: new_attributes }
           document.reload
-          expect(document.name).to eq 'New name'
+          expect(document.slug).to eq 'new_slug'
           expect(document.content).to eq 'New content'
         end
 

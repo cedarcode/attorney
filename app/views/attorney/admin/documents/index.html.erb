@@ -16,7 +16,6 @@
     <% @documents.each do |document| %>
       <tr>
         <td><%= document.slug %></td>
-        <td><%= document.name %></td>
         <td><%= document.content %></td>
         <td><%= link_to 'Show', admin_document_path(document) %></td>
         <td><%= link_to 'Edit', edit_admin_document_path(document) %></td>
