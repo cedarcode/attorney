@@ -9,7 +9,14 @@ RSpec::Core::RakeTask.new(:spec)
 task default: :spec
 task test: :spec
 
-APP_RAKEFILE = File.expand_path("../spec/support/dummy/Rakefile", __FILE__)
+require 'rails'
+if Rails.version.start_with?('5.0')
+  APP_RAKEFILE = File.expand_path('../spec/support/dummy/rails5_0/Rakefile', __FILE__)
+elsif Rails.version.start_with?('5.1')
+  APP_RAKEFILE = File.expand_path('../spec/support/dummy/rails5_1/Rakefile', __FILE__)
+end
+
+
 load 'rails/tasks/engine.rake'
 load 'rails/tasks/statistics.rake'
 require 'bundler/gem_tasks'

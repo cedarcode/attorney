@@ -1,7 +1,14 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path("../support/dummy/config/environment.rb", __FILE__)
+
+require 'rails'
+if Rails.version.start_with?('5.0')
+  require File.expand_path("../support/dummy/rails5_0/config/environment.rb", __FILE__)
+elsif Rails.version.start_with?('5.1')
+  require File.expand_path("../support/dummy/rails5_1/config/environment.rb", __FILE__)
+end
+
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'

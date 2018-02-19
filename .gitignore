@@ -1,9 +1,10 @@
 .bundle/
 log/*.log
 pkg/
-spec/support/dummy/db/*.sqlite3
-spec/support/dummy/db/*.sqlite3-journal
-spec/support/dummy/log/*.log
-spec/support/dummy/tmp/
+spec/support/dummy/**/db/*.sqlite3
+spec/support/dummy/**/db/*.sqlite3-journal
+spec/support/dummy/**/log/*.log
+spec/support/dummy/**/tmp/
 
 /Gemfile.lock
+/gemfiles/*.gemfile.lock
