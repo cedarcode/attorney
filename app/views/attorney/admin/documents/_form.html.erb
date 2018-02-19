@@ -14,6 +14,7 @@
   <div class="field">
     <%= form.label :slug %>
     <%= form.text_field :slug, id: :document_slug %>
+    <small><%= "(Slugs are used to create your documents url. For example: https://www.website.com#{attorney_mounted_path}/terms-and-conditions)" %></small>
   </div>
 
   <div class="field">
