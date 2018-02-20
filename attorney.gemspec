@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails", "~> 3.7"
+  s.add_development_dependency "capybara", "~> 2.7"
   s.add_development_dependency "shoulda-matchers", "~> 3.1"
   s.add_development_dependency "appraisal", "~> 2.2"
 end
