@@ -20,9 +20,9 @@ $ gem install attorney
 
 ## Usage
 
-Install migrations and `attorney.yml` file:
+Install migrations:
 ```bash
-$ bin/rails generate attorney:install
+$ bin/rails attorney:install:migrations
 ```
 
 ## Contributing

@@ -19,7 +19,7 @@ module Attorney
 
     before do
       @routes = Engine.routes
-      @request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials(Attorney.basic_auth[:name], Attorney.basic_auth[:password])
+      @request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials('attorney', 'secret')
     end
 
     describe 'GET #index' do

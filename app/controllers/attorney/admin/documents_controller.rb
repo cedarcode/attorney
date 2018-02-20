@@ -2,7 +2,7 @@ require_dependency "attorney/application_controller"
 
 module Attorney
   class Admin::DocumentsController < ApplicationController
-    http_basic_authenticate_with name: Attorney.basic_auth[:name], password: Attorney.basic_auth[:password]
+    http_basic_authenticate_with name: Attorney.http_auth[:name], password: Attorney.http_auth[:password]
     before_action :set_document, only: [:show, :edit, :update, :destroy]
 
     def index
