@@ -1,4 +1,4 @@
-<%= form_with(model: [:admin, document], local: true) do |form| %>
+<%= form_for([:admin, document]) do |form| %>
   <% if document.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(document.errors.count, 'error') %> prohibited this document from being saved:</h2>
@@ -13,13 +13,13 @@
 
   <div class="field">
     <%= form.label :slug %>
-    <%= form.text_field :slug, id: :document_slug %>
+    <%= form.text_field :slug %>
     <small><%= "(Slugs are used to create your documents url. For example: https://www.website.com#{attorney_mounted_path}/terms-and-conditions)" %></small>
   </div>
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content, id: :document_content, data: { 'rich-editor' => true } %>
+    <%= form.text_area :content, data: { 'rich-editor' => true } %>
   </div>
 
   <div class="actions">
