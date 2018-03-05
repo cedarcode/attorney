@@ -88,6 +88,16 @@ Every document is accessible through it's slugged URL. For example,
  able to see it by going to `/legal/terms-and-conditions` in
  your website. It's really as simple as that.
 
+### Configuring layout
+Attorney will attempt to use the `application` layout as the
+ default for displaying documents. If you need to use a different
+ layout you can do it by adding the following configuration in
+  `config/initializers/attorney.rb`:
+
+```ruby
+Attorney.application_layout = 'your_own_layout'
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/cedarcode/attorney/ )
