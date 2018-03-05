@@ -10,5 +10,10 @@ module Attorney
       visit 'attorney/terms-and-conditions'
       expect(page).to have_content 'There is content!'
     end
+
+    it 'uses application layout' do
+      visit 'attorney/terms-and-conditions'
+      expect(page).to have_content "Rails #{Rails.version} layout"
+    end
   end
 end
