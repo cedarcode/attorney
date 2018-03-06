@@ -1,4 +1,5 @@
 require 'attorney/engine'
+require 'jquery-rails'
 
 module Attorney
   mattr_accessor :application_layout do

@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require 'attorney/jquery-3.3.1.min'
+//= require jquery
+//= require jquery_ujs
 //= require 'attorney/bootstrap.bundle.min'
 //= require_tree .
