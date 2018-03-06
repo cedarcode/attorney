@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Attorney</title>
-  <%= stylesheet_link_tag    "attorney/application", media: "all" %>
-  <%= javascript_include_tag "attorney/application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Attorney</title>
 
-<%= yield %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag    'attorney/application', media: 'all' %>
+    <%= javascript_include_tag 'attorney/application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <%= link_to 'Documents Admin', admin_documents_path, class: 'navbar-brand' %>
+      </div>
+    </nav>
 
-</body>
+    <div class="container">
+      <br>
+      <%= show_notice(notice) %>
+      <%= yield %>
+    </div>
+  </body>
 </html>
