@@ -3,7 +3,7 @@ require 'rails_helper'
 module Attorney
   describe 'document show screen' do
     before do
-      Document.create!(slug: 'terms-and-conditions', content: 'There is content!')
+      Document.create!(slug: 'terms-and-conditions', published: true, content: 'There is content!')
     end
 
     it 'displays document by slug' do

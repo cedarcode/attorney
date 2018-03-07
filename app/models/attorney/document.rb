@@ -1,5 +1,7 @@
 module Attorney
   class Document < ApplicationRecord
+    scope :published, -> { where(published: true) }
+
     validates :slug, uniqueness: true
     validates :slug, presence: true
     validate :slug_format_is_valid

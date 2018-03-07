@@ -17,5 +17,12 @@ module Attorney
         end
       end
     end
+
+    describe '.published' do
+      let!(:document_1) { Document.create!(slug: 'terms-1', published: true) }
+      let!(:document_2) { Document.create!(slug: 'terms-2', published: false) }
+
+      it { expect(Document.published).to eq [document_1] }
+    end
   end
 end
