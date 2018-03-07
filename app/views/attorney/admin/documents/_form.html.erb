@@ -17,9 +17,21 @@
     </div>
     <div class="col-10">
       <%= form.text_field :slug, class: 'form-control', placeholder: 'terms-and-conditions' %>
-      <small class="form-text text-muted"><%= "(Slugs are used to create your documents url. For example: https://www.website.com#{attorney_mounted_path}/terms-and-conditions)" %></small>
+      <small class="form-text text-muted"><%= "Slugs are used to create your documents url. For example: https://www.website.com#{attorney_mounted_path}/terms-and-conditions" %></small>
     </div>
   </div>
+
+  <br>
+  <div class="form-group row">
+    <div class="col-2 ">
+      <%= form.label :published, 'Publish', class: 'col-form-label' %>
+    </div>
+    <div class="col-10">
+      <%= form.check_box :published %>
+      <small class="form-text text-muted"><%= "The document won't be visible until you publish it" %></small>
+    </div>
+  </div>
+
   <br>
   <div class="form-group row">
     <%= form.label :content, class: 'col-2 col-form-label' %>

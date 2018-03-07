@@ -4,6 +4,7 @@
   <thead>
   <tr>
     <th scope="col" width="20%">Slug</th>
+    <th scope="col">Published?</th>
     <th scope="col">Content</th>
     <th scope="col" width="15%" class="text-center" colspan="3"></th>
   </tr>
@@ -13,6 +14,7 @@
   <% @documents.each do |document| %>
     <tr>
       <td scope="row"><%= document.slug %></td>
+      <td><%= published_badge(document) %></td>
       <td><%= document.content.truncate(200) %></td>
       <td><%= link_to 'Show', admin_document_path(document), class: 'text-info' %></td>
       <td><%= link_to 'Edit', edit_admin_document_path(document), class: 'text-info' %></td>
