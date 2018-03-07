@@ -7,7 +7,8 @@ module Attorney
     end
 
     initializer 'attorney.assets.precompile' do |app|
-      app.config.assets.precompile += %w( application.js application.css )
+      app.config.assets.paths << Rails.root.join('vendor', 'assets', 'javascripts')
+      app.config.assets.paths << Rails.root.join('vendor', 'assets', 'stylesheets')
     end
   end
 end
