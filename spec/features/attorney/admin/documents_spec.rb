@@ -2,9 +2,9 @@ require 'rails_helper'
 
 module Attorney
   describe 'admin documents' do
-    before do
-      page.driver.browser.basic_authorize(Attorney.http_auth[:name], Attorney.http_auth[:password])
-    end
+    include Support::Helpers::Auth
+
+    before { authenticate }
 
     describe 'list documents' do
       before do
@@ -69,7 +69,7 @@ module Attorney
       end
     end
 
-    describe 'delete document' do
+    describe 'delete document', js: true do
       before { Document.create!(slug: 'terms-and-conditions', content: 'There is content!') }
 
       it 'deletes document successfully' do
