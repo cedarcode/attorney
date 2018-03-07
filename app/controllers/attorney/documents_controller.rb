@@ -5,7 +5,7 @@ module Attorney
     layout Attorney.application_layout
 
     def show
-      @document = Document.find_by_slug!(params[:slug])
+      @document = Document.published.find_by_slug!(params[:slug])
     end
   end
 end
