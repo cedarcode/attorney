@@ -1,28 +1,37 @@
 <h1>Documents list</h1>
 <br>
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th scope="col" width="20%">Slug</th>
-    <th scope="col">Published?</th>
-    <th scope="col">Content</th>
-    <th scope="col" width="10%" class="text-center" colspan="2"></th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @documents.each do |document| %>
+<% if @documents.any? %>
+  <table class="table table-striped">
+    <thead>
     <tr>
-      <td scope="row"><%= link_to document.slug, admin_document_path(document), class: 'text-secondary' %></td>
-      <td><%= published_badge(document) %></td>
-      <td><%= document.content.truncate(200) %></td>
-      <td><%= link_to 'Edit', edit_admin_document_path(document), class: 'text-info' %></td>
-      <td><%= link_to 'Destroy', admin_document_path(document), class: 'text-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <th scope="col" width="20%">Slug</th>
+      <th scope="col">Published?</th>
+      <th scope="col">Content</th>
+      <th scope="col" width="10%" class="text-center" colspan="2"></th>
     </tr>
-  <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+    <% @documents.each do |document| %>
+      <tr>
+        <td scope="row"><%= link_to document.slug, admin_document_path(document), class: 'text-secondary' %></td>
+        <td><%= published_badge(document) %></td>
+        <td><%= document.content.truncate(200) %></td>
+        <td><%= link_to 'Edit', edit_admin_document_path(document), class: 'text-primary' %></td>
+        <td><%= link_to 'Destroy', admin_document_path(document), class: 'text-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Document', new_admin_document_path, class: 'btn btn-info' %>
+  <br>
+  <%= link_to 'New Document', new_admin_document_path, class: 'btn btn-primary' %>
+<% else %>
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">We don't have anything to show yet :(</h5>
+      <p class="card-text">Looks like you haven't created any documents. Try creating the first one by clicking the button below!</p>
+      <%= link_to 'New Document', new_admin_document_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>
