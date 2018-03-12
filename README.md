@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/cedarcode/attorney.svg?branch=master)](https://travis-ci.org/cedarcode/attorney)
 [![Code Climate](https://codeclimate.com/github/cedarcode/attorney/badges/gpa.svg)](https://codeclimate.com/github/cedarcode/attorney)
+[![Gem Version](https://badge.fury.io/rb/attorney.svg)](https://badge.fury.io/rb/attorney)
 
 Easily define and mount `Terms of Service`, `Privacy Policy` and
  any other static page to your Rails app.
