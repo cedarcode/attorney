@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Easily define and mount 'Terms of Service', 'Privacy Policy' and any other static page to your Rails app"
   s.license     = 'MPL-2.0'
 
-  s.files = Dir['{app,config,db,lib}/**/*', 'Rakefile']
+  s.files = Dir['{app,config,db,lib,vendor}/**/*', 'Rakefile']
   s.test_files = `git ls-files -- spec/*`.split("\n")
 
   s.add_dependency 'rails', '~> 5.0'
