@@ -9,8 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Attorney::VERSION
   s.authors     = ['Gonzalo Rodriguez', 'Marcelo Casiraghi']
   s.email       = ['gonzalo@cedarcode.com', 'marcelo@cedarcode.com']
+  s.homepage    = 'https://github.com/cedarcode/attorney'
   s.summary     = "Easily define and mount 'Terms of Service', 'Privacy Policy' and any other static page to your Rails app"
-  s.license     = 'Mozilla Public License 2.0'
+  s.license     = 'MPL-2.0'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'Rakefile']
   s.test_files = `git ls-files -- spec/*`.split("\n")
